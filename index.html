@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio Mahasiswa</title>
+    <!-- Menghubungkan file CSS eksternal -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Bagian Header Website -->
+    <header class="header">
+        <div class="container">
+            <h1>Budi Santoso</h1>
+            <nav class="nav">
+                <ul>
+                    <li><a href="#tentang">Tentang Saya</a></li>
+                    <li><a href="#portofolio">Portofolio</a></li>
+                    <li><a href="#kontak">Kontak</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Konten Utama Website -->
+    <main class="container utama">
+        
+        <!-- Bagian Tentang Saya -->
+        <section id="tentang" class="tentang">
+            <h2>Tentang Saya</h2>
+            <!-- Menggunakan placeholder gambar profil sederhana -->
+            <img src="https://via.placeholder.com/150" alt="Foto Profil Budi" class="foto-profil">
+            
+            <p><strong>Nama:</strong> Budi Santoso</p>
+            <p><strong>NIM:</strong> 123456789</p>
+            <p><strong>Program Studi:</strong> Teknik Informatika</p>
+            <p>Halo! Saya adalah mahasiswa semester 5 yang sedang antusias belajar pemrograman web. Saya suka mencoba hal-hal baru dan sedang mengerjakan tugas praktikum Pengembangan Aplikasi Web.</p>
+            
+            <h3>Keahlian Saat Ini (ul)</h3>
+            <ul>
+                <li>HTML Dasar</li>
+                <li>CSS Dasar</li>
+                <li>Microsoft Office</li>
+            </ul>
+
+            <h3>Target Belajar Semester Ini (ol)</h3>
+            <ol>
+                <li>Memahami konsep struktur HTML yang baik</li>
+                <li>Mampu membuat tampilan web yang rapi dengan CSS</li>
+                <li>Mempelajari dasar pembuatan formulir</li>
+            </ol>
+        </section>
+
+        <!-- Bagian Aside untuk informasi tambahan -->
+        <aside class="info-samping">
+            <h3>Info Tambahan</h3>
+            <p>Sedang mempelajari HTML dan CSS dasar. Mohon bimbingannya ya!</p>
+        </aside>
+
+        <!-- Bagian Portofolio -->
+        <section id="portofolio" class="portofolio">
+            <h2>Portofolio Tugas</h2>
+            <div class="daftar-proyek">
+                <div class="proyek">
+                    <h3>Tugas Biodata Diri</h3>
+                    <p>Membuat halaman biodata diri sederhana menggunakan HTML dasar tanpa CSS.</p>
+                </div>
+                <div class="proyek">
+                    <h3>Tugas Database Kampus</h3>
+                    <p>Merancang struktur tabel sederhana untuk database mahasiswa.</p>
+                </div>
+            </div>
+            
+            <!-- Tabel Mata Kuliah dengan tag semantik -->
+            <h3>Daftar Mata Kuliah Semester Ini</h3>
+            <table class="tabel-matkul">
+                <caption>Tabel 1. Jadwal Mata Kuliah Semester 5</caption>
+                <thead>
+                    <tr>
+                        <th scope="col">No</th>
+                        <th scope="col">Kode</th>
+                        <th scope="col">Nama Mata Kuliah</th>
+                        <th scope="col">SKS</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">1</th>
+                        <td>TI01</td>
+                        <td>Pengembangan Aplikasi Web</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">2</th>
+                        <td>TI02</td>
+                        <td>Basis Data Lanjut</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">3</th>
+                        <td>TI03</td>
+                        <td>Rekayasa Perangkat Lunak</td>
+                        <td>3</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="3">Total SKS</td>
+                        <td>9</td>
+                    </tr>
+                </tfoot>
+            </table>
+        </section>
+
+        <!-- Bagian Formulir Kontak -->
+        <section id="kontak" class="form-kontak">
+            <h2>Hubungi Saya</h2>
+            <form action="#" method="get">
+                <fieldset>
+                    <legend>Formulir Pesan Layanan</legend>
+                    
+                    <div class="grup-input">
+                        <label for="nama">Nama Lengkap:</label>
+                        <input type="text" id="nama" name="nama" required>
+                    </div>
+
+                    <div class="grup-input">
+                        <label for="email">Email Aktif:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+
+                    <div class="grup-input">
+                        <label for="nohp">Nomor HP:</label>
+                        <input type="tel" id="nohp" name="nohp">
+                    </div>
+
+                    <div class="grup-input">
+                        <label for="umur">Umur (Tahun):</label>
+                        <input type="number" id="umur" name="umur" min="17" max="50">
+                    </div>
+
+                    <div class="grup-input">
+                        <label>Jenis Kelamin:</label>
+                        <div class="pilihan">
+                            <input type="radio" id="pria" name="gender" value="pria" required>
+                            <label for="pria">Pria</label>
+                            
+                            <input type="radio" id="wanita" name="gender" value="wanita" required>
+                            <label for="wanita">Wanita</label>
+                        </div>
+                    </div>
+
+                    <div class="grup-input">
+                        <label>Minat Belajar:</label>
+                        <div class="pilihan">
+                            <input type="checkbox" id="minat-web" name="minat[]" value="web">
+                            <label for="minat-web">Web Development</label>
+                            
+                            <input type="checkbox" id="minat-data" name="minat[]" value="data">
+                            <label for="minat-data">Data Science</label>
+                        </div>
+                    </div>
+
+                    <div class="grup-input">
+                        <label for="kategori">Kategori Pesan:</label>
+                        <select id="kategori" name="kategori">
+                            <option value="tugas">Diskusi Tugas</option>
+                            <option value="proyek">Kerjasama Proyek</option>
+                            <option value="lainnya">Lainnya</option>
+                        </select>
+                    </div>
+
+                    <div class="grup-input">
+                        <label for="pesan">Isi Pesan:</label>
+                        <textarea id="pesan" name="pesan" rows="4" required></textarea>
+                    </div>
+
+                    <button type="submit" class="tombol-kirim">Kirim Pesan</button>
+                </fieldset>
+            </form>
+        </section>
+
+    </main>
+
+    <!-- Bagian Footer Website -->
+    <footer class="footer">
+        <p>&copy; 2026 Budi Santoso - Mahasiswa</p>
+    </footer>
+
+</body>
+</html>
